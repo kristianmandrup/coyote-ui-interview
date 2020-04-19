@@ -61,7 +61,6 @@ export class InlineEdit extends Component {
     setTimeout(() => {
       const rand = Math.random()
       const result = rand > 0.3 ? { success: true } : { error: 'Oops! Something has gone terribly wrong' }
-      console.log({ result })
       result.error ? this.handleError(result) : this.handleSuccess(result)
     }, 1000)
   }
@@ -74,7 +73,6 @@ export class InlineEdit extends Component {
 
   handleError(result) {
     const text = this.state.initialText
-    console.log('reset text', { text })
     this.setState({
       ...this.resetState,      
       text,
@@ -116,7 +114,6 @@ export class InlineEdit extends Component {
     const { textStyle, spinnerContainerStyle, containerStyle, errorMsgStyle } = this
     const { state, onClickText, onConfirm, onInputChange, onKeyPress } = this
     const { text, confirmed, editable, result, errorMsg } = state || {}
-    console.log({ confirmed, result, text })
     return (
       <div style={ containerStyle }>
         { editable ? 

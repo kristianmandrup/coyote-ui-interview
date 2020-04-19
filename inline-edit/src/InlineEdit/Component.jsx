@@ -3,7 +3,6 @@ import React, { Component } from "react"
 import Spinner from 'react-spinner'
 import './Spinner.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faTimes, faCheck } from '@fortawesome/fontawesome-svg-core'
 import { faTimes, faCheck } from '@fortawesome/free-solid-svg-icons'
 
 const successStyle = { color: 'green' }
